@@ -1,52 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>vue-template</title>
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/element-ui/2.12.0/theme-chalk/index.css"
-        integrity="sha256-bEU1E9bONHyZVHW0v9nFo6vnFpctv7NGJgDJQ6xnzeQ=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/index.css">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/element-ui/2.12.0/theme-chalk/index.css"
+      integrity="sha256-bEU1E9bONHyZVHW0v9nFo6vnFpctv7NGJgDJQ6xnzeQ="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/index.css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="app">
-        <el-container class="tac">
-            <el-aside width="300px" class="dark side-menu">
-                <el-row>
-                    <el-col class="sidebar-title" :span="24">
-                        <h2>
-                            <i class="material-icons">extension</i>
-                            vue-template
-                        </h2>
-                    </el-col>
-                </el-row>
-
-                <el-row>
-                    <el-col :span="24">
-                        <el-menu :router="true" theme="dark">
-                            <el-menu-item index="/">
-                                <i class="material-icons">home</i>
-                                Home
-                            </el-menu-item>
-                        </el-menu>
-                    </el-col>
-                </el-row>
-            </el-aside>
-
-            <el-main class="vh-full router-view" v-loading.body="loading">
-                <router-view :key="$route.fullPath"></router-view>
-            </el-main>
-        </el-container>
-
+      <header class="menubar" role="menubar"></header>
+      <section role="sidebar">
+        <div class="tags-box"></div>
+      </section>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"
-        integrity="sha256-1fEPhSsRKlFKGfK3eO710tEweHh1fwokU5wFGDHO+vg=" crossorigin="anonymous"
-        data-main="/index.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"
+      integrity="sha256-1fEPhSsRKlFKGfK3eO710tEweHh1fwokU5wFGDHO+vg="
+      crossorigin="anonymous"
+      data-main="/index.js"
+    ></script>
     <script src="/bundle.js"></script>
-</body>
-
+  </body>
 </html>
